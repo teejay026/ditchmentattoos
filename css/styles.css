@@ -11632,7 +11632,7 @@ body {
 
 @media (max-width: 576px) {
   .projects-section .row.gx-0.mb-5.mb-lg-0.justify-content-center {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
   }
 }
 
