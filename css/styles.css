@@ -11478,6 +11478,14 @@ body {
   min-height: 3.5rem;
   background-color: #fff;
 }
+
+@media (max-width: 576px) {
+  #mainNav .masthead{
+  display: none;
+  padding: 5rem 0 2rem 0;
+  }
+}
+
 #mainNav .navbar-toggler {
   font-size: 80%;
   padding: 0.75rem;
