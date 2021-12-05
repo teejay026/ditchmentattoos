@@ -11625,7 +11625,7 @@ body {
 
 @media (max-width: 576px) {
   .projects-section {
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 85%)
   }
 }
