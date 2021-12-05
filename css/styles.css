@@ -11563,7 +11563,7 @@ body {
   width: 100%;
   height: auto;
   min-height: 35rem;
-  padding: 15rem 0;
+  padding: 12rem 0 2rem 0;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 75%, #000 100%), url("../assets/img/bg-masthead.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -11627,6 +11627,12 @@ body {
   .projects-section {
   padding: 0 2rem;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.5) 75%, #000 85%)
+  }
+}
+
+@media (max-width: 576px) {
+  .projects-section .row.gx-0.mb-5.mb-lg-0.justify-content-center {
+    margin-bottom: 0;
   }
 }
 
