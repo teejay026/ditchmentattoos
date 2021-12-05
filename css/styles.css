@@ -4152,6 +4152,13 @@ textarea.form-control-lg {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
 }
+
+@media (max-width: 576px) {
+  .navbar {
+  display: none;
+  }
+}
+
 .navbar > .container,
 .navbar > .container-fluid,
 .navbar > .container-sm,
@@ -11479,12 +11486,6 @@ body {
   background-color: #fff;
 }
 
-@media (max-width: 576px) {
-  #mainNav .masthead{
-  display: none;
-  padding: 5rem 0 2rem 0;
-  }
-}
 
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -11591,6 +11592,14 @@ body {
 .masthead h2, .masthead .h2 {
   max-width: 20rem;
   font-size: 1rem;
+}
+
+
+@media (max-width: 576px) {
+  .masthead {
+  padding: 5rem 0 2rem 0 !important;
+  min-height: 25rem !important;
+  }
 }
 @media (min-width: 768px) {
   .masthead h1, .masthead .h1 {
