@@ -1,6 +1,6 @@
 require 'class.phpmailer.php';
  
-$outlook_mail = new PHPMailer;
+$outlook_mail = new PHPMailer(true);
  
 $outlook_mail->IsSMTP();
 // Send email using Outlook SMTP server
@@ -10,10 +10,10 @@ $outlook_mail->Port = 587;
 $outlook_mail->SMTPSecure = 'tls';
 $outlook_mail->SMTPDebug = 1;
 $outlook_mail->SMTPAuth = true;
-$outlook_mail->Username = 'donotreplytest@Outlook.com.au';
+$outlook_mail->Username = 'donotreplytest@outlook.com.au';
 $outlook_mail->Password = '!?Freedom112!?';
  
-$outlook_mail->From = 'donotreplytest@Outlook.com.au';
+$outlook_mail->From = 'donotreplytest@outlook.com.au';
 $outlook_mail->FromName = 'Do Not Reply-Test';// from name
 $outlook_mail->AddAddress('tiffanypeters20@hotmail.com', 'To Name');  // Add a recipient  to name
 $outlook_mail->AddAddress('Myself');  // Name is optional
