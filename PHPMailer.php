@@ -1,32 +1,30 @@
 require 'class.phpmailer.php';
  
-$outlook_mail = new PHPMailer(true);
+$mail = new PHPMailer(true);
  
-$outlook_mail->IsSMTP();
-// Send email using Outlook SMTP server
-$outlook_mail->Host = 'smtp-mail.outlook.com';
-// port for Send email
-$outlook_mail->Port = 587;
-$outlook_mail->SMTPSecure = 'tls';
-$outlook_mail->SMTPDebug = 1;
-$outlook_mail->SMTPAuth = true;
-$outlook_mail->Username = 'donotreplytest@outlook.com.au';
-$outlook_mail->Password = '!?Freedom112!?';
+$mail->isSMTP();
+    // Send email using Outlook SMTP server
+$mail->Host = 'smtp-mail.outlook.com';
+    // port for Send email
+$mail->SMTPAuth = true;
+$mail->Username = 'donotreplytest@outlook.com.au';
+$mail->Password = '!?Freedom112!?';
+$mail->Port = 587;
+$mail->SMTPSecure = 'tls';
+
  
-$outlook_mail->From = 'donotreplytest@outlook.com.au';
-$outlook_mail->FromName = 'Do Not Reply-Test';// from name
-$outlook_mail->AddAddress('tiffanypeters20@hotmail.com', 'To Name');  // Add a recipient  to name
-$outlook_mail->AddAddress('Myself');  // Name is optional
+$mail->setFrom('donotreplytest@outlook.com.au', From Name);
+$mail->addAddress('tiffanypeters20@hotmail.com', 'To Name');  // Add a recipient  to name
  
-$outlook_mail->isHTML(true); // Set email format to HTML
+$mail->isHTML(true); // Set email format to HTML
  
-$outlook_mail->Subject = 'Here is the subject for onlinecode';
-$outlook_mail->Body    = 'Send email using Outlook SMTP server <br>This is the HTML message body <strong>in bold!</strong> <a href="http://onlinecode/" target="_blank">onlincode.org</a>';
-$outlook_mail->AltBody = 'This is the body in plain text for non-HTML mail clients at http://onlinecode/';
+$mail->Subject = 'Here is the subject for onlinecode';
+$mail->Body    = 'Send email using Outlook SMTP server <br>This is the HTML message body <strong>in bold!</strong> <a href="http://onlinecode/" target="_blank">onlincode.org</a>';
+$mail->AltBody = 'This is the body in plain text for non-HTML mail clients at http://onlinecode/';
  
-if(!$outlook_mail->Send()) {
+if(!$mail->Send()) {
 echo 'Message could not be sent.';
-echo 'Mailer Error: ' . $outlook_mail->ErrorInfo;
+echo 'Mailer Error: ' . $mail->ErrorInfo;
 exit;
 }
 else
